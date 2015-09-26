@@ -5,6 +5,13 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
+  resources :users
+
+  resources :chats do
+    resources :comments
+  end
+
+  mount API => '/'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,0 +1,13 @@
+<h1>Listing Comments</h1>
+
+<table>
+  <tr>
+    <th>Comment</th>
+  </tr>
+
+  <% @chats.each do |chat| %>
+    <tr>
+      <td><%= chat.text %></td>
+    </tr>
+  <% end %>
+</table>
