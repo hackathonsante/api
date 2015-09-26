@@ -11,13 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150926083905) do
+ActiveRecord::Schema.define(version: 20150926154348) do
 
   create_table "chats", force: :cascade do |t|
     t.string   "title"
     t.string   "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "kinder"
+    t.string   "card"
   end
 
   create_table "chats_users", force: :cascade do |t|
@@ -43,6 +45,7 @@ ActiveRecord::Schema.define(version: 20150926083905) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.string   "card"
   end
 
 end
